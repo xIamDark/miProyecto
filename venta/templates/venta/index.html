@@ -1,0 +1,387 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer's Heaven</title>
+    <link rel="shortcut icon" href="% static 'img/Gamer's black.png' %">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!--links  bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <!--  navbar superior -->
+    <div class="top-navbar">
+        <img class="mx-auto d-block" src="{% static 'img/GamersWhite.png' %}" width="190px" alt="icono">
+        <div class="icons">
+            <a href="{% url 'login' %}"><img src="{% static 'img/register.png' %}" alt="" width="18px">Ingresar</a>
+            <a href="{% url 'registro' %}"><img src="{% static 'img/register.png' %}" alt= width="18px">Registrarse</a>
+            </a>
+            
+        </div>
+    </div>
+    <!--------------------------------------------------------------------------------------------------------->
+
+    <!--menu  navbar -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href= id="logo"><img src="{% static 'img/Heaven claro.png' %}" alt="icono"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><img src="{% static 'img/menu.png' %}" alt="menu_image" width="30px"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'productos' %}">Productos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorias
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
+                  <li><a class="dropdown-item" href="{% url 'smarthphone' %}">Smartphones</a></li>
+                  <li><a class="dropdown-item" href="#">Sillas Gamer</a></li>
+                  <li><a class="dropdown-item" href="#">Perifericos</a></li>
+                  <li><a class="dropdown-item" href="#">Audifonos</a></li>
+                  <li><a class="dropdown-item" href="#">Teclados</a></li>
+                  <li><a class="dropdown-item" href="#">Monitores Gamer</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'nosotros' %}">Acerca de nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+              </li>
+            </ul>
+            <form class="d-flex" id="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!--------------------------------------------------------------------------------------------------------->
+  
+    <!-- Contenido inicio -->
+    <section class="inicio">
+    <div class="contenido">
+      <h1> <span>Articulos Gamings</span>
+        <br>
+        todos en <span id="span2">20%</span> de descuento
+      </h1>
+      <p>¡Para inaugurar la apertura de la tienda partimos con un descuentazo!!
+        <br>Aproveche ya!!
+      </p>
+      <div class="btn"><button>Comprar</button></div>
+
+    </div>
+    <div class="carrusel">
+      <div class="container" ">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'img/razerxd.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'img/Los-mejores-productos-de-gaming-del-momento-1200x900.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--------------------------------------------------------------------------------------------------------->
+
+
+    <!-- tarjetas de productos -->
+    <div class="container" id="product-cards">
+      <h1 class="text-center">Productos</h1>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'img/iphone 13 pro.png' %}" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Iphone 13 pro</h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$729.990<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'img/audifonos_blutu.jpg' %}" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Audifonos bluetooth</h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$229.990<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'img/16593534_1.jpg' %}" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Laptop Gamer</h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$849.990 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'img/procesador-intel-celeron-g5905-socket-lga1200-4m-cache-350-ghz-58w.jpg' %}" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Procesador Intel</h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$399.990 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'img/tarjeta-grafica-msi-1660-super-gaming-x.jpg' %}" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Tarjeta Grafica </h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$307.800 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'img/HP-m32f-01-350x350.jpg' %}" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Monitor Gamer </h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$159.000 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'img/TCL-30-XL-Review-plus.jpg' %}" alt="">
+            <div class="card-body">
+              <h3 class="text-center">TCL 30 XL</h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$244.990<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'img/h1.png' %}" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Audifonos</h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$29.990 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--------------------------------------------------------------------------------------------------------->
+    <!--seccion de productos con descuento -->
+    <div class="container" id="pro-dest">
+      <div class="row">
+        <div class="col-md-6 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'img/c1.png' %}" alt="">
+            <div class="card-img-overlay">
+              <h3>Mejores Notebooks</h3>
+              <p>Hasta un 20% de descuento</p>
+              <button id="shopnow">Comprar</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'img/c2.png' %}" alt="">
+            <div class="card-img-overlay">
+              <h3>Mejores Audifonos</h3>
+              <p>Hasta un 50% de descuento</p>
+              <button id="shopnow">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--------------------------------------------------------------------------------------------------------->
+      <!--Seccion productos varios -->
+    <div class="container" id="other">
+      <div class="row">
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'img/perifericos.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h3>Perifericos oficina</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'img/c4.png' %}" alt="">
+            <div class="card-img-overlay">
+              <h3>Articulos Gaming</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="{% static 'img/3078-thickbox_default (1).jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h3>Sillas Gamer</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------------------------------------------------------------------------------------------------------->
+
+    <!-- Servicios-->
+    <div class="container" id="servicio">
+      <div class="row">
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <h3>Envios Gratis</h3>
+          <p>En ordenes sobre los $40.000</p>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-rotate-left"></i>
+          <h3>Devolucion Gratis</h3>
+          <p>Sobre los 30 dias </p>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-truck"></i>
+          <h3>Envios Rapidos</h3>
+          <p>Internacionales</p>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <h3>Productos de Marca</h3>
+          <p>100% garantizado</p>
+        </div>
+      </div>
+    </div>
+    <!--------------------------------------------------------------------------------------------------------->
+    <!-- footer -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container align-content-center">
+          <div class="row">
+
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>Gamers Heaven</h3>
+              <p>
+                Duoc Viña del Mar <br>
+                Valparaiso,Chile <br>
+              </p>
+              <strong>Numero:</strong> +56956590446 <br>
+              <strong>Correo Electronico: </strong>gamersheaven.cl@gmail.com<br>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Links Acortadores</h4>
+             <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Sobre Nosotros</a></li>
+              <li><a href="#">Productos</a></li>
+              <li><a href="#">Terminos de Servicio</a></li>
+              <li><a href="#">Politicas </a></li>
+             </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Redes sociales</h4>
+              <div class="socail-links mt-3">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-skype"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-links">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+    <a href="#" class="arrow"><i><img src="{% static 'img/arrow.png' %}" alt=""></i></a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

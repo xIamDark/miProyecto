@@ -1,0 +1,416 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="shortcut icon" href="images/Gamer's black.png">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!--links  bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--------------------------------------------------------------------------------------------------------->
+    <!--links fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <!--------------------------------------------------------------------------------------------------------->
+</head>
+<body>
+    <!--  navbar superior -->
+    <div class="top-navbar">
+      <img class="mx-auto d-block" src="{% static 'img/GamersWhite.png' %}" width="190px" alt="icono">
+      <div class="icons">
+          <a href="{% url 'login' %}"><img src="{% static 'img/register.png' %}" alt="" width="18px">Ingresar</a>
+          <a href="{% url 'registro' %}"><img src="{% static 'img/register.png' %}" alt="" width="18px">Registrarse</a>
+          <a href=""></a>
+            
+      </div>
+    </div>
+    <!--------------------------------------------------------------------------------------------------------->
+    <!--menu  navbar -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href= id="logo"><img src="{% static 'img/Heaven claro.png' %}" alt="icono"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><img src="{% static 'img/menu.png' %}" alt="" width="30px"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href=>Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'productos' %}">Productos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorias
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
+                  <li><a class="dropdown-item" href="{% url 'smarthphone' %}">Smartphones</a></li>
+                  <li><a class="dropdown-item" href="#">Sillas Gamer</a></li>
+                  <li><a class="dropdown-item" href="#">Perifericos</a></li>
+                  <li><a class="dropdown-item" href="#">Audifonos</a></li>
+                  <li><a class="dropdown-item" href="#">Teclados</a></li>
+                  <li><a class="dropdown-item" href="#">Monitores Gamer</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'nosotros' %}">Acerca de nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+              </li>
+            </ul>
+            <form class="d-flex" id="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!--------------------------------------------------------------------------------------------------------->
+    <!--menu  navbar -->
+    <div class="imagen_fondo">
+      
+      <img id="imagen_fondo_1" src="{% static 'img/imagen_fondo_producto2.jpg' %}" alt="">
+           
+    </div>
+    <!--ITEMS -->
+    <div class="container" id="product-cards">
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/monitor_gamer.jpg' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Monitor Asus</h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$179.990<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/mouse-gamer-razer-viper-ultimate.jpg' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Razer Viper Ultimate </h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$124.990<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/pr12.png' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Controles Ps4 Originales</h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$59.990 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/pr11.png' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Mouse Pato Gaming</h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$14.990 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/pr7.png' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Pc Inicial Gamer i5 </h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$499.990 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/51X+Vp26oNL.jpg' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Monitor Gamer Redragon </h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$159.000 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/19.Razer_DeathAdder_Essential_mouse_1000x1000.png' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Razer DeathAdder</h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$21.990<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/61lFRRrMeRL._SL1198_-1000x1000-1.jpg' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Monitor Olidata</h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$39.990 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Columna 2 items-->
+      <div class="container" id="product-cards">
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/61UxfXTUyvL._AC_SL1500_-1000x1000-1.jpg' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Mouse logitech g203</h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$21.000<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/71NxczYosdL._SL1000_-1000x1000-1.jpg' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Monitor BENQ 144 hz</h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$289.990<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/787-7871399_hp-omen-27-hp-omen-gaming-monitor.png' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Monitor Hp Omen 27</h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$480.990 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/1000x1000-mm720-matte-black.png' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Mouse cooler master mm720 black</h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$29.990 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/a4tech-bloody-p30-pro-2-1000x1000-1.jpg' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Mouse Bloody p30 pro </h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$9.990 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/combo_gamer.jpg' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Combo Gamer Liv1 </h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$19.990 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/CTMGJR-012-5-1000x1000-1.jpg' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Teclado Gamer Mecanico Olympia</h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$34.990<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <img src="{% static 'img/CTMGJR-012-8-1000x1000-1.jpg' %}" alt="">
+              <div class="card-body">
+                <h3 class="text-center">Audifonos Gamer Fantech</h3>
+                <div class="star text-center">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+                <h2>$29.990 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer-top">
+          <div class="container align-content-center">
+            <div class="row">
+  
+              <div class="col-lg-3 col-md-6 footer-contact">
+                <h3>Gamers Heaven</h3>
+                <p>
+                  Duoc Viña del Mar <br>
+                  Valparaiso,Chile <br>
+                </p>
+                <strong>Numero:</strong> +56956590446 <br>
+                <strong>Correo Electronico: </strong>gamersheaven.cl@gmail.com<br>
+              </div>
+  
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Links Acortadores</h4>
+               <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Terminos de Servicio</a></li>
+                <li><a href="#">Politicas </a></li>
+               </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Redes sociales</h4>
+                <div class="socail-links mt-3">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-skype"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 footer-links">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+      <a href="#" class="arrow"><i><img src="{% static 'img/arrow.png' %}" alt=""></i></a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
